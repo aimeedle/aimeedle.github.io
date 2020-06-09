@@ -1695,6 +1695,10 @@
 			text-decoration: none;
 		}
 
+	h1 {
+		font-size: 3rem;
+	}
+
 	h2 {
 		font-size: 1.75rem;
 	}
