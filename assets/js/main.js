@@ -4,6 +4,82 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
+new Chart(document.getElementById("line-chart"), {
+	type: 'line',
+	data: {
+	  labels: ["January", "February", "March"],
+	  datasets: [{ 
+		  data: [6953, 7557, 4122],
+		  label: "Family 2020",
+		  borderColor: "#3e95cd",
+		  fill: false
+		}, { 
+		  data: [6649, 6932, 9070],
+		  label: "Family 2019",
+		  borderColor: "#8e5ea2",
+		  fill: false
+		}, { 
+		  data: [2532, 2797, 1588],
+		  label: "Womens 2020",
+		  borderColor: "#3cba9f",
+		  fill: false
+		}, { 
+		  data: [2511, 2680, 3585],
+		  label: "Womens 2019",
+		  borderColor: "#FFA500",
+		  fill: false
+		}, { 
+		  data: [550, 527, 266],
+		  label: "Mens 2020",
+		  borderColor: "rgb(255, 99, 132)",
+		  fill: false
+		}, 
+		{ 
+		  data: [585, 514, 642],
+		  label: "Mens 2019",
+		  borderColor: "rgb(255, 255, 0)",
+		  fill: false
+		}
+	  ]
+	},
+	options: {
+	  title: {
+		display: true,
+		text: 'Clothing sales by category in Q1 2019 and Q1 2020',
+		fontColor: "#ffffff"
+	  }, scales: {
+        yAxes: [{ 
+			scaleLabel: {
+				display: true,
+				labelString: "Non-seasonally adjusted sales in millions USD",
+				fontColor: "#ffffff"
+			},
+			ticks: {
+				fontColor: 'white'
+			},
+			gridLines: {
+				display: false,
+				color: "#ffffff"
+			},
+		}],
+		xAxes: [{
+			ticks: {
+				fontColor: 'white'
+			  },
+			gridLines: {
+				display: false,
+				color: "#ffffff"
+			},
+		}]
+	  },
+	  legend: {
+		labels: {
+		  fontColor: 'white'
+		}
+	  }
+	}
+  });
+
 (function($) {
 
 	skel.breakpoints({
